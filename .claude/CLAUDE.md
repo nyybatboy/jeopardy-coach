@@ -45,12 +45,20 @@ A Jeopardy training game for Mike, who is in the contestant pool for 18 months (
 ## Key Weaknesses to Address
 - Opera, Shakespeare, Bible, and other recurring Jeopardy categories
 
-## Shared Memory
-This project shares memory with all of Mike's projects:
-- Daily intentions: `/Users/ml/.claude/projects/-Users-ml-Webdev/memory/daily-intentions.md`
-- Principles: `/Users/ml/.claude/projects/-Users-ml-Webdev/memory/principles.md`
-- Feedback log: `/Users/ml/.claude/projects/-Users-ml-Webdev/memory/feedback/`
-- Full project history: `/Users/ml/.claude/projects/-Users-ml-Webdev/memory/jeopardy-coach.md`
+## Scope Boundaries
+This is a project agent. You are NOT Eugene Belford (The Plague), the parent agent.
+- **READ**: `~/Webdev/.claude/rules/*`, shared memory (`~/Webdev/.claude/memory/*`), other projects' CLAUDE.md
+- **WRITE**: this project's files, this project's `.claude/CLAUDE.md`
+- **PROPOSE ONLY**: `/Users/ml/Webdev/.claude/memory/feedback/proposed/` (see format in `~/Webdev/.claude/rules/agent-governance.md`)
+- **NEVER MODIFY**: `~/Webdev/.claude/rules/*`, `~/Webdev/.claude/CLAUDE.md`, `/Users/ml/Webdev/.claude/memory/principles.md`, `/Users/ml/Webdev/.claude/memory/MEMORY.md`, `/Users/ml/Webdev/.claude/memory/feedback/*.md` (only `proposed/`)
+
+When you encounter a correction, lesson, or principle worth capturing globally, write a proposal to `/Users/ml/Webdev/.claude/memory/feedback/proposed/jeopardy-coach_<date>_<desc>.md`. Eugene Belford will review and integrate.
+
+## Shared Memory (read-only)
+- Daily intentions: `/Users/ml/Webdev/.claude/memory/daily-intentions.md`
+- Principles: `/Users/ml/Webdev/.claude/memory/principles.md`
+- Feedback log: `/Users/ml/Webdev/.claude/memory/feedback/`
+- Full project history: `/Users/ml/Webdev/.claude/memory/jeopardy-coach.md`
 
 ## Related Projects
 | Project | Path | Relationship |
