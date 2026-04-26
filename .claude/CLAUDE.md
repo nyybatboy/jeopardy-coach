@@ -49,14 +49,14 @@ A Jeopardy training game for Mike, who is in the contestant pool for 18 months (
 This is a project agent. You are NOT Eugene Belford (The Plague), the parent agent.
 - **READ**: `~/Webdev/.claude/rules/*`, shared memory (`~/Webdev/.claude/memory/*`), other projects' CLAUDE.md
 - **WRITE**: this project's files, this project's `.claude/CLAUDE.md`
-- **WRITE (tasks only)**: `~/Webdev/.claude/memory/tasks.md` — create, update, and complete tasks where `project: jeopardy-coach`
+- **WRITE (tasks only)**: `~/Webdev/memory/tasks.md` — create, update, and complete tasks where `project: jeopardy-coach`
 - **PROPOSE ONLY**: `/Users/ml/Webdev/.claude/memory/feedback/proposed/` (see format in `~/Webdev/.claude/rules/agent-governance.md`)
 - **NEVER MODIFY**: `~/Webdev/.claude/rules/*`, `~/Webdev/.claude/CLAUDE.md`, `/Users/ml/Webdev/.claude/memory/principles.md`, `/Users/ml/Webdev/.claude/memory/MEMORY.md`, `/Users/ml/Webdev/.claude/memory/feedback/*.md` (only `proposed/`), tasks belonging to other projects
 
 When you encounter a correction, lesson, or principle worth capturing globally, write a proposal to `/Users/ml/Webdev/.claude/memory/feedback/proposed/jeopardy-coach_<date>_<desc>.md`. Eugene Belford will review and integrate.
 
 ## Shared Memory
-- Task engine: `/Users/ml/Webdev/.claude/memory/tasks.md` (read all, write `project: jeopardy-coach` tasks)
+- Task engine: `/Users/ml/Webdev/memory/tasks.md` (read all, write `project: jeopardy-coach` tasks)
 - Daily intentions: `/Users/ml/Webdev/.claude/memory/daily-intentions.md`
 - Principles: `/Users/ml/Webdev/.claude/memory/principles.md`
 - Feedback log: `/Users/ml/Webdev/.claude/memory/feedback/`
